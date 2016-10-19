@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="
+	https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+	<title>Vue Todo</title>
+</head>
+
+<style>
+	html  {
+		font-family: sans-serif;
+		font-size: 14px;
+	}
+	.intro {
+		display: block;
+		width: 100%;
+		max-width: 1170px;
+		text-align: center;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	h1 {
+		font-weight: 300;
+		font-size: 3.2em;
+		text-align: center;
+		padding-top: 40px;
+	}
+
+
+	.logo {
+		width: 50px;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+	}
+
+	a {
+		color: #838383;
+		
+	}
+
+	.title {
+		font-size: 20px;
+		color: #42b983;
+	}
+
+	.new_title {
+		margin: 0 auto;
+		position: relative;
+		display: block;
+		margin-top: 20px
+	}
+
+	.btn {
+		background: #4fc08d;
+		padding: 5px 10px;
+		color: #fff;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		box-shadow: none;
+		border-radius: 20%;
+		border: none;
+
+		padding: 0.75em 2em;
+		border-radius: 2em;
+		cursor: pointer;
+		outline: none;
+		/*transition: all 0.2s linear;*/
+	}
+
+	.btn:hover {
+		transform: scale(1.02);
+		/*transition: all 0.2s linear;*/
+		-webkit-box-shadow: 0px 5px 3px -3px rgba(0,0,0,0.35);
+		-moz-box-shadow: 0px 5px 3px -3px rgba(0,0,0,0.35);
+		box-shadow: 0px 5px 3px -3px rgba(0,0,0,0.35);
+
+	}
+
+	.btn:focus {
+		box-shadow: none;
+		
+		border: none;
+	}
+
+
+	.todo_cont {
+		margin-top: 40px;
+	}
+
+	.todo_cont li {
+		text-decoration: none;
+		margin: 0 auto;
+		list-style: none;
+		color: #838383;
+		width: 250px;
+		padding: 10px 15px;
+		border: 1px solid #838383;
+		margin-bottom: 10px;
+		
+	}
+</style>
+
+<body>
+
+
+	
+	<img class="logo" src="https://vuejs.org/images/logo.png" alt="" />
+
+	
+
+
+	
+	<div id="todos" v-bind:data-title="title"  >
+		<h1>{{title}}</h1>
+		<button class="new_title btn" >New Title</button>
+
+
+		<div class="todo_cont">
+
+			<ul>
+				<li v-for="task in tasks">{{task.task_title}}</li>
+			</ul>
+
+
+			<form action="">
+				<input type="text" placeholder="New Task" />
+			</form>
+		</div>		
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- <script src="http://sandbox.alexti-dev.ru/vue.js/vue.js" ></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.1/vue.min.js" ></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js" ></script>
+	<script src="todo.js"></script>
+
+</body>
+</html>
